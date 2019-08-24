@@ -1,0 +1,17 @@
+﻿生成启动时间为 2019/7/18 19:33:41。
+     1>项目“D:\2017年7月\大数运算\大数运算\大数运算.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         F:\Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt text1.c
+         text1.c
+     1>d:\2017年7月\大数运算\大数运算\text1.c(26): warning C4047: “函数”:“const char *”与“char”的间接级别不同
+     1>d:\2017年7月\大数运算\大数运算\text1.c(26): warning C4024: “strlen”: 形参和实参 1 的类型不同
+     1>d:\2017年7月\大数运算\大数运算\text1.c(28): warning C4013: “BigMul”未定义；假设外部返回 int
+     1>d:\2017年7月\大数运算\大数运算\text1.c(28): warning C4047: “=”:“char *”与“int”的间接级别不同
+     1>d:\2017年7月\大数运算\大数运算\text1.c(37): error C2040: “BigMul”:“char *(char *,char *)”与“int ()”的间接寻址级别不同
+     1>d:\2017年7月\大数运算\大数运算\text1.c(203): warning C4047: “函数”:“char”与“char [500000]”的间接级别不同
+     1>d:\2017年7月\大数运算\大数运算\text1.c(203): warning C4024: “fac”: 形参和实参 1 的类型不同
+     1>已完成生成项目“D:\2017年7月\大数运算\大数运算\大数运算.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.32
