@@ -50,15 +50,60 @@ void DelBlank(char *str){
 }
 
 //×Ö·û´®Ñ¹Ëõ
+void CompressStr(char *str){
+	int i = 0;
+	int cnt = 1;
+	while (str[i] != '\0'){
+		if (str[i] == str[i + 1]){
+			cnt++;
+		}
+		else {
+			printf("%d", cnt);
+			printf("%c", str[i]);
+			cnt = 1;
+		}
+		i++;
+	}
+	str[i+1] = '\0';
+}
+
+void CompressStr2(char *str){
+	int i = 0;
+	int j = 0;
+	int cnt = 1;
+	while (str[i] != '\0'){
+		if (str[i] == str[i + 1]){
+			cnt++;
+		}
+		else {
+			str[j++] = cnt + '0';
+			str[j++] = str[i];
+			cnt = 1;
+		}
+		i++;
+	}
+	str[j] = '\0';
+}
+
 
 int main(){
 	printf("%d\n", IsPowTow(32));
 	printf("%d\n", IsPowTow(31));
 	printf("%d\n", IsPowTow2(32)); 
 	printf("%d\n", IsPowTow2(31)); 
-	char string[] = "   asd  rf g     d  ";
-	DelBlank(string);
-	printf("%s\n", string);
+
+	char str[] = "   asd  rf g     d  ";
+	DelBlank(str);
+	printf("%s\n", str);
+
+	char trr[] = "aaaafsssscddd";
+	CompressStr(trr);
+	printf("%s\n", trr);//error
+
+	char trr2[] = "aaaafsssscddd";
+	CompressStr2(trr2);
+	printf("%s\n", trr2);
+
 	system("pause");
 	return 0;
 }
