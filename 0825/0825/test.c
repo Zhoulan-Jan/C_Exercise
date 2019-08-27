@@ -85,7 +85,6 @@ void CompressStr2(char *str){
 	str[j] = '\0';
 }
 
-
 int main(){
 	printf("%d\n", IsPowTow(32));
 	printf("%d\n", IsPowTow(31));
