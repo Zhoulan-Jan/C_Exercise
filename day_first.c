@@ -13,14 +13,17 @@ char * ReplaceBlank(char *s){
           if(*p==' '){
             blank++;
           }
+          p++;
     }
     int pOld=OldLen;
     int pNew=OldLen+blank*2;
+    s[pNew]='\0';
     while(pOld && pNew){
       if (s[pOld]==' '){
         s[pNew--]='0';
         s[pNew--]='2';
         s[pNew--]='%';
+        pOld--;
       }else {
         s[pNew--]=s[pOld--];
       }
@@ -31,6 +34,6 @@ char * ReplaceBlank(char *s){
 
 int main(){
   char str[]="we are students";
-  printf("%s ",ReplaceBlank(str));
+  printf("%s\n ",ReplaceBlank(str));
   return 0;
 }
